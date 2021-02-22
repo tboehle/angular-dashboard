@@ -28,6 +28,6 @@ export class AppComponent implements OnInit {
 
     setTimeout(() => {
       this.applicationState = 'ok';
-    }, 2000);
+    }, 100);
   }
 }
