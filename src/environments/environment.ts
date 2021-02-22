@@ -1,9 +1,22 @@
+import { AppConfig } from '../app/shared/models/config';
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-export const environment = {
-  production: false
+export const environment: AppConfig = {
+  production: false,
+  env: 'dev',
+  basename: '/',
+  name: 'Angular Dashboard',
+  api: 'http://localhost:8080/v1',
+  webSocket: 'ws://localhost:8080/v1/ws',
+  dateFormat: 'YYYY-MM-DD',
+
+  // OIDC
+  openIdUri: 'http://localhost:3030/realms/swf/protocol/openid-connect/auth',
+  openIdScope: 'openid roles',
+  openIdClientId: 'dashboard',
+  openIdRedirectUri: 'http://localhost:3000/auth/callback',
 };
 
 /*
