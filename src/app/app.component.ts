@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppConfigService } from './shared/services/app-config.service';
+import { NavItem } from './sidebar/sidebar-link/sidebar-link.component';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,7 @@ import { AppConfigService } from './shared/services/app-config.service';
 })
 export class AppComponent implements OnInit {
   applicationState: 'ok' | 'enoperm' | 'authenticated' | 'startup' | 'error' = 'startup';
+  navigation: NavItem[] = [];
 
   constructor(private config: AppConfigService) {}
 
@@ -26,8 +28,31 @@ export class AppComponent implements OnInit {
       'color:#2c5aa0;font-weight:bold',
     );
 
+    this.setupNavigation();
+
     setTimeout(() => {
       this.applicationState = 'ok';
     }, 100);
+  }
+
+  private setupNavigation() {
+    const nav: NavItem[] = [
+      {
+        label: 'Dashboard',
+        route: 'home',
+        icon: 'assets/images/dashboard.svg',
+      },
+      {
+        label: 'Maintenance',
+        route: 'maintenance',
+        icon: 'assets/images/build.svg',
+      },
+      {
+        label: 'Training',
+        route: 'training',
+        icon: 'assets/images/touch_app.svg',
+      },
+    ];
+    this.navigation = nav;
   }
 }

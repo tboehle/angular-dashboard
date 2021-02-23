@@ -1,0 +1,45 @@
+@import '../../../assets/styles/global.scss';
+
+// Link
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  padding: 15px 20px;
+
+  color: $color-fg;
+  background: rgba(0, 0, 0, 0);
+
+  &::before {
+      position: absolute;
+      top: 5px;
+      left: 0;
+      bottom: 5px;
+
+      width: 0;
+      background: $color-fg;
+
+      content: '';
+  }
+
+  &.itemActive {
+      &::before {
+          width: 6px;
+      }
+  }
+  & img {
+      flex-shrink: 0;
+      width: 25px;
+      height: 25px;
+  }
+}
+.itemTitle {
+  flex: 1;
+
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 10px;
+}

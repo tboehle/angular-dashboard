@@ -1,0 +1,474 @@
+@import './variables.scss';
+body {
+  color: $color-text;
+  background-color: $color-bg;
+}
+
+body .ui-label-disabled {
+  color: $color-text-disabled;
+}
+
+body a {
+  color: $color-primary;
+  text-decoration: none;
+}
+body a:hover {
+  color: $color-primary-light;
+}
+body a:active {
+  color: $color-primary-dark;
+}
+body a:focus {
+  outline: 1px dotted $color-primary;
+}
+
+body .ui-inputtext {
+  color: $color-text-disabled;
+  background-color: $color-bg;
+  border: 1px solid $color-outline-light;
+}
+body .ui-inputtext:not([disabled]) {
+  color: $color-text;
+  border: 1px solid $color-outline;
+}
+body .ui-float-label > label {
+  color: $color-text-disabled;
+  background: $color-bg;
+}
+body .ui-float-label > input.ui-state-filled:not([disabled]) ~ label {
+  color: $color-text;
+}
+body .ui-float-label > input:not([disabled]) ~ label {
+  color: $color-text-lighter;
+}
+body .ui-inputtext:enabled:hover:not(.ui-state-error) {
+  border-color: $color-primary;
+}
+body .ui-float-label > input:not([disabled]):hover ~ label,
+body .ui-float-label > input:focus ~ label,
+body .ui-float-label > .ui-inputwrapper-focus ~ label {
+  color: $color-primary;
+}
+
+body .ui-button {
+  color: $color-outline;
+  background-color: $color-outline-light;
+  border-color: $color-outline-light;
+}
+body .ui-button:enabled {
+  color: $color-primary-fg;
+  background-color: $color-primary;
+  border-color: $color-primary;
+}
+body .ui-button:enabled:focus,
+body .ui-button:enabled:hover {
+  color: $color-primary-fg;
+  background-color: $color-primary-light;
+  border-color: $color-primary-light;
+}
+body .ui-button:enabled:active {
+  color: $color-primary-fg;
+  background-color: $color-primary-dark;
+  border-color: $color-primary-dark;
+}
+body .ui-button.ui-button-secondary {
+  color: $color-text-disabled;
+  background-color: $color-bg;
+  border-color: $color-text-disabled;
+}
+body .ui-button.ui-button-secondary:enabled {
+  color: $color-primary;
+  background-color: $color-bg;
+  border-color: $color-primary;
+}
+body .ui-button.ui-button-secondary:enabled:focus,
+body .ui-button.ui-button-secondary:enabled:hover {
+  color: $color-primary-fg;
+  background-color: $color-primary-light;
+  border-color: $color-primary-light;
+}
+body .ui-button.ui-button-secondary:enabled:active {
+  color: $color-primary-fg;
+  background-color: $color-primary-dark;
+  border-color: $color-primary-dark;
+}
+body .ui-button.ui-button-bare {
+  color: $color-text-disabled;
+  background-color: transparent;
+  border-color: transparent;
+}
+body .ui-button.ui-button-bare:enabled {
+  color: $color-primary;
+  background-color: transparent;
+  border-color: transparent;
+}
+body .ui-button.ui-button-bare:enabled:focus,
+body .ui-button.ui-button-bare:enabled:hover {
+  color: $color-primary-light;
+  background-color: transparent;
+  border-color: transparent;
+}
+body .ui-button.ui-button-bare:enabled:active {
+  color: $color-primary-dark;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+body .ui-table .ui-table-thead > tr > th {
+  color: $color-darkgray-3;
+  background-color: $color-midgray-3;
+}
+body .ui-table .ui-table-tbody > tr {
+  color: $color-text;
+  background-color: $color-lightgray-2;
+}
+body .ui-table .ui-table-tbody > tr:nth-child(even) {
+  background-color: $color-bg;
+}
+body .ui-table .ui-table-tbody > tr > td {
+  color: inherit;
+  background-color: inherit;
+}
+
+body .ui-paginator {
+  border: none;
+  background: $color-bg;
+}
+body .ui-paginator .ui-paginator-first,
+body .ui-paginator .ui-paginator-prev,
+body .ui-paginator .ui-paginator-next,
+body .ui-paginator .ui-paginator-last {
+  color: $color-text-light;
+}
+body .ui-paginator .ui-paginator-first:hover,
+body .ui-paginator .ui-paginator-prev:hover,
+body .ui-paginator .ui-paginator-next:hover,
+body .ui-paginator .ui-paginator-last:hover {
+  color: $color-text-lighter;
+}
+body .ui-paginator .ui-paginator-first.ui-state-disabled,
+body .ui-paginator .ui-paginator-prev.ui-state-disabled,
+body .ui-paginator .ui-paginator-next.ui-state-disabled,
+body .ui-paginator .ui-paginator-last.ui-state-disabled {
+  color: $color-text-disabled;
+}
+body .ui-paginator .ui-paginator-current {
+  color: #848484;
+}
+body .ui-paginator .ui-paginator-pages .ui-paginator-page {
+  color: $color-primary;
+}
+body .ui-paginator .ui-paginator-pages .ui-paginator-page.ui-state-active {
+  color: $color-bg;
+  background: $color-primary;
+}
+body .ui-paginator .ui-paginator-pages .ui-paginator-page:not(.ui-state-active):hover {
+  color: $color-primary-light;
+}
+
+body .ui-radiobutton .ui-radiobutton-box {
+  border-color: $color-outline;
+  background-color: $color-bg;
+}
+body .ui-radiobutton .ui-radiobutton-box.ui-state-focus,
+body .ui-radiobutton .ui-radiobutton-box:hover {
+  border-color: $color-primary;
+}
+body .ui-radiobutton .ui-radiobutton-box.ui-state-active .ui-radiobutton-icon {
+  background-color: $color-primary;
+}
+body .ui-radiobutton .ui-radiobutton-box.ui-state-disabled {
+  border-color: $color-outline-light;
+  background-color: $color-bg;
+}
+body .ui-radiobutton .ui-radiobutton-box.ui-state-active.ui-state-disabled .ui-radiobutton-icon {
+  background-color: $color-outline-light;
+}
+body .ui-radiobutton-label.ui-label-disabled {
+  color: $color-outline;
+}
+
+body .ui-chkbox .ui-chkbox-box {
+  color: $color-primary;
+  border-color: $color-outline;
+  background-color: $color-bg;
+}
+body .ui-chkbox .ui-chkbox-box.ui-state-focus,
+body .ui-chkbox .ui-chkbox-box:hover {
+  border-color: $color-primary;
+}
+body .ui-chkbox .ui-chkbox-box.ui-state-disabled {
+  color: $color-outline-light;
+  border-color: $color-outline-light;
+  background-color: $color-bg;
+}
+body .ui-chkbox-label.ui-label-disabled {
+  color: $color-text-disabled;
+}
+
+body .ui-toast .ui-toast-message.ui-toast-message-error {
+  background-color: $color-error-light;
+  // border: 1px solid $color-error;
+  border: 0 none;
+  color: $color-error;
+}
+body .ui-toast .ui-toast-message.ui-toast-message-error .ui-toast-close-icon {
+  color: $color-error;
+}
+
+body .ui-dialog .ui-dialog-titlebar {
+  color: $color-text;
+  background-color: $color-text-disabled;
+}
+body .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-icon {
+  color: $color-text;
+}
+body .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-icon:hover {
+  color: $color-text-lighter;
+}
+body .ui-dialog .ui-dialog-content {
+  background-color: $color-bg;
+  color: $color-text;
+}
+body .ui-dialog .ui-dialog-footer {
+  background-color: $color-bg;
+  color: $color-text;
+}
+
+body .pi.disabled {
+  color: $color-text-disabled;
+}
+
+// ================= DARK MODE
+
+body[dark] {
+  color: $color-alt-text;
+  background-color: $color-alt-bg;
+}
+
+body[dark] .ui-label-disabled {
+  color: $color-alt-text-disabled;
+}
+
+body[dark] .ui-inputtext {
+  color: $color-alt-text-disabled;
+  background: $color-alt-bg;
+  border: 1px solid $color-alt-outline-light;
+}
+body[dark] .ui-inputtext:not([disabled]) {
+  color: $color-alt-text;
+  border: 1px solid $color-alt-outline;
+}
+body[dark] .ui-float-label > label {
+  color: $color-alt-text-disabled;
+  background: $color-alt-bg;
+}
+body[dark] .ui-float-label > input.ui-state-filled:not([disabled]) ~ label {
+  color: $color-alt-text;
+}
+body[dark] .ui-float-label > input:not([disabled]) ~ label {
+  color: $color-alt-text-lighter;
+}
+body[dark] .ui-inputtext:enabled:hover:not(.ui-state-error) {
+  border-color: $color-primary;
+}
+body[dark] .ui-float-label > input:not([disabled]):hover ~ label,
+body[dark] .ui-float-label > input:focus ~ label,
+body[dark] .ui-float-label > .ui-inputwrapper-focus ~ label {
+  color: $color-primary;
+}
+
+body[dark] .ui-button {
+  color: $color-alt-outline;
+  background-color: $color-alt-outline-light;
+  border-color: $color-alt-outline-light;
+}
+body[dark] .ui-button:enabled {
+  color: $color-alt-bg;
+  background-color: $color-primary;
+  border-color: $color-primary;
+}
+body[dark] .ui-button:enabled:focus,
+body[dark] .ui-button:enabled:hover {
+  color: $color-alt-bg;
+  background-color: $color-primary-light;
+  border-color: $color-primary-light;
+}
+body[dark] .ui-button:enabled:active {
+  color: $color-alt-bg;
+  background-color: $color-primary-dark;
+  border-color: $color-primary-dark;
+}
+body[dark] .ui-button.ui-button-secondary {
+  color: $color-alt-text-disabled;
+  background-color: $color-alt-bg;
+  border-color: $color-alt-text-disabled;
+}
+body[dark] .ui-button.ui-button-secondary:enabled {
+  color: $color-primary;
+  background-color: $color-alt-bg;
+  border-color: $color-primary;
+}
+body[dark] .ui-button.ui-button-secondary:enabled:focus,
+body[dark] .ui-button.ui-button-secondary:enabled:hover {
+  color: $color-alt-bg;
+  background-color: $color-primary-light;
+  border-color: $color-primary-light;
+}
+body[dark] .ui-button.ui-button-secondary:enabled:active {
+  color: $color-alt-bg;
+  background-color: $color-primary-dark;
+  border-color: $color-primary-dark;
+}
+body[dark] .ui-button.ui-button-bare {
+  color: $color-alt-text-disabled;
+  background-color: transparent;
+  border-color: transparent;
+}
+body[dark] .ui-button.ui-button-bare:enabled {
+  color: $color-primary;
+  background-color: transparent;
+  border-color: transparent;
+}
+body[dark] .ui-button.ui-button-bare:enabled:focus,
+body[dark] .ui-button.ui-button-bare:enabled:hover {
+  color: $color-primary-light;
+  background-color: transparent;
+  border-color: transparent;
+}
+body[dark] .ui-button.ui-button-bare:enabled:active {
+  color: $color-primary-dark;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+body[dark] .ui-radiobutton .ui-radiobutton-box {
+  border-color: $color-alt-outline;
+  background-color: $color-alt-bg;
+}
+body[dark] .ui-radiobutton .ui-radiobutton-box.ui-state-focus,
+body[dark] .ui-radiobutton .ui-radiobutton-box:hover {
+  border-color: $color-primary;
+}
+body[dark] .ui-radiobutton .ui-radiobutton-box.ui-state-active .ui-radiobutton-icon {
+  background-color: $color-primary;
+}
+body[dark] .ui-radiobutton .ui-radiobutton-box.ui-state-disabled {
+  border-color: $color-alt-outline-light;
+  background-color: $color-alt-bg;
+}
+body[dark]
+  .ui-radiobutton
+  .ui-radiobutton-box.ui-state-active.ui-state-disabled
+  .ui-radiobutton-icon {
+  background-color: $color-alt-outline-light;
+}
+body[dark] .ui-radiobutton-label.ui-label-disabled {
+  color: $color-alt-text-disabled;
+}
+
+body[dark] .ui-chkbox .ui-chkbox-box {
+  color: $color-primary;
+  border-color: $color-alt-outline;
+  background-color: $color-alt-bg;
+}
+body[dark] .ui-chkbox .ui-chkbox-box.ui-state-focus,
+body[dark] .ui-chkbox .ui-chkbox-box:hover {
+  border-color: $color-primary;
+}
+body[dark] .ui-chkbox .ui-chkbox-box.ui-state-disabled {
+  color: $color-alt-outline-light;
+  border-color: $color-alt-outline-light;
+  background-color: $color-alt-bg;
+}
+body[dark] .ui-chkbox-label.ui-label-disabled {
+  color: $color-alt-text-disabled;
+}
+body[dark] .ui-fileupload .ui-fileupload-buttonbar {
+  border-color: $color-alt-outline-light;
+  background-color: $color-alt-bg;
+}
+body[dark] .ui-fileupload .ui-fileupload-content {
+  color: $color-alt-text-dark;
+  border-color: $color-alt-outline-light;
+  background-color: $color-alt-bg;
+}
+body[dark] .ui-fileupload .ui-fileupload-content .ui-progressbar {
+  background-color: $color-alt-bg;
+  border-color: $color-alt-bg;
+}
+
+body[dark] .ui-table .ui-table-thead > tr > th {
+  color: $color-midgray-3;
+  background-color: $color-darkgray-3;
+}
+body[dark] .ui-table .ui-table-tbody > tr {
+  color: $color-alt-text;
+  background-color: $color-darkgray-2;
+}
+body[dark] .ui-table .ui-table-tbody > tr:nth-child(even) {
+  background-color: $color-alt-bg;
+}
+body .ui-table .ui-table-tbody > tr > td {
+  color: inherit;
+  background-color: inherit;
+}
+
+body[dark] .ui-paginator {
+  border: none;
+  background: $color-alt-bg;
+}
+body[dark] .ui-paginator .ui-paginator-first,
+body[dark] .ui-paginator .ui-paginator-prev,
+body[dark] .ui-paginator .ui-paginator-next,
+body[dark] .ui-paginator .ui-paginator-last {
+  color: $color-alt-text-light;
+}
+body[dark] .ui-paginator .ui-paginator-first:hover,
+body[dark] .ui-paginator .ui-paginator-prev:hover,
+body[dark] .ui-paginator .ui-paginator-next:hover,
+body[dark] .ui-paginator .ui-paginator-last:hover {
+  color: $color-alt-text-lighter;
+}
+body[dark] .ui-paginator .ui-paginator-first.ui-state-disabled,
+body[dark] .ui-paginator .ui-paginator-prev.ui-state-disabled,
+body[dark] .ui-paginator .ui-paginator-next.ui-state-disabled,
+body[dark] .ui-paginator .ui-paginator-last.ui-state-disabled {
+  color: $color-alt-text-disabled;
+}
+body[dark] .ui-paginator .ui-paginator-current {
+  color: #848484;
+}
+body[dark] .ui-paginator .ui-paginator-pages .ui-paginator-page {
+  color: $color-primary;
+}
+body[dark] .ui-paginator .ui-paginator-pages .ui-paginator-page.ui-state-active {
+  color: $color-alt-bg;
+  background: $color-primary;
+}
+body[dark] .ui-paginator .ui-paginator-pages .ui-paginator-page:not(.ui-state-active):hover {
+  color: $color-primary-light;
+}
+
+body[dark] .ui-dialog .ui-dialog-titlebar {
+  color: $color-alt-text;
+  background-color: $color-alt-text-disabled;
+}
+body[dark] .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-icon {
+  color: $color-alt-text;
+}
+body[dark] .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-icon:hover {
+  color: $color-alt-text-lighter;
+}
+body[dark] .ui-dialog .ui-dialog-content {
+  background-color: $color-alt-bg;
+  color: $color-alt-fg;
+}
+body[dark] .ui-dialog .ui-dialog-footer {
+  background-color: $color-alt-bg;
+  color: $color-alt-fg;
+}
+
+body[dark] .pi.disabled {
+  color: $color-alt-text-disabled;
+}

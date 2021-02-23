@@ -1,0 +1,44 @@
+@import './variables.scss';
+
+.flex-table {
+  display: block;
+
+  .tr {
+    display: block;
+
+    .th {
+      display: block;
+    }
+
+    .td {
+      &.left {
+        font-weight: bold;
+      }
+      display: block;
+    }
+  }
+
+  @media (min-width: $breakpoint) {
+    width: 100%;
+    display: table;
+    border-collapse: collapse;
+
+    .tr {
+      display: table-row;
+      height: 30px;
+
+      .td {
+        display: table-cell;
+        vertical-align: top;
+
+        &.left {
+          font-weight: bold;
+        }
+        &.right {
+          width: 60%;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}

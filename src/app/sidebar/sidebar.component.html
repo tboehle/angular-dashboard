@@ -4,4 +4,9 @@
       <img alt="logo" src="assets/images/logo.svg" />
     </a>
   </div>
+  <app-sidebar-link
+    *ngFor="let nav of navItems"
+    [navItem]="nav"
+    [collapsed]="collapsed"
+  ></app-sidebar-link>
 </section>

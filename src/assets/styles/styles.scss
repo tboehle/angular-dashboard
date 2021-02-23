@@ -1,0 +1,110 @@
+/* You can add global styles to this file, and also import other style files */
+@import './global.scss';
+@import './theme.scss';
+@import './primeng.scss';
+
+.bold {
+  font-weight: bold;
+  color: $color-text;
+}
+
+.italic {
+  font-style: italic;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #242E42;
+}
+
+body {
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  height: calc(100% - 16px);
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: normal;
+  color: inherit;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  margin: 0;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: normal;
+  color: inherit;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  margin: 0;
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: normal;
+  color: inherit;
+  margin-bottom: 0.5em;
+}
+
+h4 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: normal;
+  color: inherit;
+  margin-bottom: 0.5em;
+}
+
+h5 {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  color: inherit;
+  margin-bottom: 0.5em;
+}
+
+h6 {
+  margin: 0;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: bold;
+  color: inherit;
+  margin-bottom: 0.5em;
+}
+
+// body a {
+//   color: inherit;
+//   font-weight: inherit;
+//   font-style: inherit;
+//   text-decoration: inherit;
+//   &:link {
+//     color: inherit;
+//     text-decoration: inherit;
+//   }
+//   &:visited {
+//     color: inherit;
+//     text-decoration: inherit;
+//   }
+//   &:focus {
+//     color: inherit;
+//     text-decoration: inherit;
+//   }
+//   &:hover {
+//     color: inherit;
+//     text-decoration: inherit;
+//   }
+//   &:active {
+//     color: inherit;
+//     text-decoration: inherit;
+//   }
+// }

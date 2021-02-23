@@ -1,0 +1,18 @@
+@import './global.scss';
+
+@keyframes ui-progress-spinner-color {
+  0%,
+  100% {
+    stroke: black;
+  }
+}
+
+.ui-progress-spinner-circle {
+  // for IE11 only
+  stroke-dasharray: 89, 200;
+  stroke: black;
+}
+
+.ui-float-label {
+  margin-top: 2em;
+}

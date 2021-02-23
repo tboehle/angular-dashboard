@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { NavItem } from './sidebar-link/sidebar-link.component';
 
 @Component({
   selector: 'app-sidebar',
@@ -6,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent implements OnInit {
-  public collapsed = true;
+  @Input()
+  navItems: NavItem[] = [];
+  public collapsed = false;
 
   constructor() {}
 

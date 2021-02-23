@@ -1,3 +1,4 @@
-<a href="/">
-  Dashboard
+<a *ngIf="navItem" [routerLink]="[navItem.route]" class="item" routerLinkActive="itemActive">
+  <img alt="logo" [src]="navItem.icon" />
+  <span *ngIf="!collapsed" class="itemTitle">{{ navItem.label }}</span>
 </a>
