@@ -40,7 +40,7 @@ export class AppComponent implements OnInit {
       {
         label: 'Dashboard',
         route: 'home',
-        icon: 'assets/images/dashboard.svg',
+        icon: 'assets/images/apps.svg',
       },
       {
         label: 'Maintenance',
