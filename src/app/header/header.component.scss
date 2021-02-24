@@ -1,0 +1,117 @@
+@import '../../assets/styles/global.scss';
+
+.root {
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  left: 200px;
+  right: 0;
+  height: 55px;
+
+  display: flex;
+
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+  &.collapsed {
+    left: 70px;
+  }
+}
+
+.button-collapse {
+  width: 55px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 18px;
+  padding-left: 5px;
+  padding-right: 20px;
+  white-space: nowrap;
+
+  & span {
+    display: block;
+    line-height: 1.3em;
+  }
+}
+
+.version {
+  font-size: 10px;
+}
+
+.env {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & span {
+    font-size: 10px;
+    color: $color-primary-light;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: solid 1px $color-primary-light;
+    border-radius: 5px;
+  }
+}
+
+.user-button {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.user-name {
+  padding-left: 5px;
+}
+
+.websocket {
+  display: flex;
+
+  &.disconnected {
+    color: $color-warning;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10;
+
+    & div {
+      display: flex;
+      flex-direction: column;
+
+      font-size: 12px;
+      padding-left: 10px;
+
+      line-height: 1;
+    }
+
+    & span {
+      &::after {
+        display: inline-block;
+        content: '';
+        animation: pusleWebSocketPending 1s linear infinite;
+      }
+    }
+
+    &.transition-enter {
+      opacity: 0;
+
+      &.transition-enter-active {
+        opacity: 1;
+        transition: all .5s;
+      }
+    }
+    &.transition-exit {
+      opacity: 1;
+
+      &.transition-enter-active {
+        opacity: 0;
+        transition: all .5s;
+      }
+    }
+  }
+}

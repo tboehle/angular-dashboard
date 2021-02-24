@@ -10,10 +10,11 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { SidebarLinkComponent } from './sidebar/sidebar-link/sidebar-link.component';
 
 import { AppStateModule } from './state/state.module';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
-  declarations: [AppComponent, SidebarComponent, SidebarLinkComponent],
+  declarations: [AppComponent, SidebarComponent, SidebarLinkComponent, HeaderComponent],
   imports: [
     CommonModule,
     BrowserModule,
