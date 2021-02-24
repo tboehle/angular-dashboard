@@ -4,7 +4,7 @@ import { NavItem } from './sidebar-link/sidebar-link.component';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
-import * as fromRoot from '../reducers';
+import { State, selectShowSidenav } from '../state';
 
 @Component({
   selector: 'app-sidebar',
@@ -17,12 +17,12 @@ export class SidebarComponent implements OnInit {
 
   showSidenav$: Observable<boolean>;
 
-  constructor(private store: Store<fromRoot.State>) {
+  constructor(private store: Store<State>) {
     /**
      * Selectors can be applied with the `select` operator which passes the state
      * tree to the provided selector
      */
-    this.showSidenav$ = this.store.select(fromRoot.selectShowSidenav);
+    this.showSidenav$ = this.store.select(selectShowSidenav);
   }
 
   ngOnInit(): void {}
