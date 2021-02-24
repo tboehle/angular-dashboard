@@ -12,7 +12,7 @@ export interface NavItem {
 })
 export class SidebarLinkComponent implements OnInit {
   @Input()
-  collapsed: boolean = true;
+  showSidenav: boolean | null = false;
   @Input()
   navItem: NavItem = null as any;
 

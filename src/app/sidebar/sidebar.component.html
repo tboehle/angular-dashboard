@@ -1,4 +1,4 @@
-<section class="root" [ngClass]="{ collapsed: collapsed }">
+<section class="root" [ngClass]="{ collapsed: !(showSidenav$ | async) }">
   <div class="logo">
     <a href="/">
       <img alt="logo" src="assets/images/logo.svg" />
@@ -7,6 +7,6 @@
   <app-sidebar-link
     *ngFor="let nav of navItems"
     [navItem]="nav"
-    [collapsed]="collapsed"
+    [showSidenav]="showSidenav$ | async"
   ></app-sidebar-link>
 </section>
