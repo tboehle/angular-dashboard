@@ -1,8 +1,16 @@
 <section class="root" [ngClass]="{ collapsed: !(showSidenav$ | async) }">
-  <button class="button-collapse">
+  <!--<button class="button-collapse">
     <img *ngIf="(showSidenav$ | async)" class="icon" alt="logo" src="assets/images/format_indent_left.svg" (click)="closeSidenav()"/>
     <img *ngIf="!(showSidenav$ | async)" class="icon" alt="logo" src="assets/images/format_indent_right.svg" (click)="openSidenav()"/>
-  </button>
+  </button>-->
+  <div>
+    <button *ngIf="(showSidenav$ | async)" class="button-collapse" mat-button (click)="closeSidenav()">
+      <mat-icon>format_indent_decrease</mat-icon>
+    </button>
+    <button *ngIf="!(showSidenav$ | async)" class="button-collapse" mat-button (click)="openSidenav()">
+      <mat-icon>format_indent_increase</mat-icon>
+    </button>
+  </div>
   <strong class="title">
     <span>{{ config.getName() }}</span>
     <span class="version">v. {{ config.getVersion()}} - {{ config.getDate() }}</span>

@@ -1,4 +1,4 @@
-<a *ngIf="navItem" [routerLink]="[navItem.route]" class="item" routerLinkActive="itemActive">
+<a mat-button *ngIf="navItem" [routerLink]="[navItem.route]" class="item" routerLinkActive="itemActive">
   <img alt="logo" [src]="navItem.icon" />
   <span *ngIf="showSidenav" class="itemTitle">{{ navItem.label }}</span>
 </a>

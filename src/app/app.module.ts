@@ -12,6 +12,9 @@ import { SidebarLinkComponent } from './sidebar/sidebar-link/sidebar-link.compon
 import { AppStateModule } from './state/state.module';
 import { HeaderComponent } from './header/header.component';
 
+import { MatButtonModule  } from '@angular/material/button';
+import { MatIconModule  } from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [AppComponent, SidebarComponent, SidebarLinkComponent, HeaderComponent],
@@ -21,6 +24,8 @@ import { HeaderComponent } from './header/header.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     AppStateModule,
+    MatButtonModule,
+    MatIconModule,
   ],
   providers: [AppConfigService],
   bootstrap: [AppComponent],
