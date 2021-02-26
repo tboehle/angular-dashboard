@@ -14,10 +14,12 @@ import { HeaderComponent } from './header/header.component';
 
 import { MatButtonModule  } from '@angular/material/button';
 import { MatIconModule  } from '@angular/material/icon';
+import { MatMenuModule  } from '@angular/material/menu';
+import { WebsocketComponent } from './header/websocket/websocket.component';
 
 
 @NgModule({
-  declarations: [AppComponent, SidebarComponent, SidebarLinkComponent, HeaderComponent],
+  declarations: [AppComponent, SidebarComponent, SidebarLinkComponent, HeaderComponent, WebsocketComponent],
   imports: [
     CommonModule,
     BrowserModule,
@@ -26,6 +28,7 @@ import { MatIconModule  } from '@angular/material/icon';
     AppStateModule,
     MatButtonModule,
     MatIconModule,
+    MatMenuModule,
   ],
   providers: [AppConfigService],
   bootstrap: [AppComponent],

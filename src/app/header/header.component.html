@@ -19,4 +19,14 @@
     <span>{{ config.getEnv() }}</span>
   </div>
   <div style="flex: 1;"></div>
+  <app-websocket class="websocket"></app-websocket>
+  <button class="user-button" mat-button (click)="showMenuHandler($event)" [matMenuTriggerFor]="menu">
+    <mat-icon>person</mat-icon>
+    <strong class="user-name">
+      Thorben Böhle
+    </strong>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="logoutHandler()">Logout</button>
+  </mat-menu>
 </section>

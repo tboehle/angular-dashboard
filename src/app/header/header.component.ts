@@ -16,6 +16,8 @@ export class HeaderComponent implements OnInit {
 
   showSidenav$: Observable<boolean>;
 
+  anchorEl: any = null;
+
   constructor(private store: Store<State>, public config: AppConfigService) {
     /**
      * Selectors can be applied with the `select` operator which passes the state
@@ -39,6 +41,20 @@ export class HeaderComponent implements OnInit {
 
   openSidenav() {
     this.store.dispatch(LayoutActions.openSidenav());
+  }
+
+  public showMenuHandler($event: any): void {
+      this.anchorEl = $event.currentTarget;
+  }
+
+  public closeMenuHandler(): void {
+      this.anchorEl = null;
+  }
+
+  public logoutHandler(): void {
+      this.closeMenuHandler()
+
+      // Action Logout
   }
 
 }
