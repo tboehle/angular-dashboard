@@ -21,13 +21,13 @@
   width: 55px;
   height: 55px;
   border: none;
-  color: black;
-  background-color: white;
+  color: currentColor;
+  background-color: inherit;
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
 }
 
 .title {
@@ -68,8 +68,8 @@
   padding-left: 20px;
   padding-right: 20px;
   border: none;
-  color: black;
-  background-color: white;
+  color: currentColor;
+  background-color: inherit;
 }
 
 .user-name {
@@ -78,4 +78,10 @@
 
 .websocket {
   display: flex;
+}
+
+.notificaion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

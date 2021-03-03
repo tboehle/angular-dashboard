@@ -2,6 +2,8 @@
 @import './global.scss';
 @import './theme.scss';
 @import './primeng.scss';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+// @import "~@angular/cdk/overlay-prebuilt.css";
 
 .bold {
   font-weight: bold;

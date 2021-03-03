@@ -15,11 +15,15 @@ import { HeaderComponent } from './header/header.component';
 import { MatButtonModule  } from '@angular/material/button';
 import { MatIconModule  } from '@angular/material/icon';
 import { MatMenuModule  } from '@angular/material/menu';
+import { MatBadgeModule } from '@angular/material/badge';
 import { WebsocketComponent } from './header/websocket/websocket.component';
+import { NotificationComponent } from './header/notification/notification.component';
+
+import { OverlayModule } from '@angular/cdk/overlay';
 
 
 @NgModule({
-  declarations: [AppComponent, SidebarComponent, SidebarLinkComponent, HeaderComponent, WebsocketComponent],
+  declarations: [AppComponent, SidebarComponent, SidebarLinkComponent, HeaderComponent, WebsocketComponent, NotificationComponent],
   imports: [
     CommonModule,
     BrowserModule,
@@ -29,6 +33,8 @@ import { WebsocketComponent } from './header/websocket/websocket.component';
     MatButtonModule,
     MatIconModule,
     MatMenuModule,
+    OverlayModule,
+    MatBadgeModule,
   ],
   providers: [AppConfigService],
   bootstrap: [AppComponent],

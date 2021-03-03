@@ -7,6 +7,11 @@
   padding-left: 10px;
   padding-right: 10;
 
+  .icon {
+    height: 24px;
+    width: 24px;
+  }
+
   div {
     display: flex;
     flex-direction: column;
@@ -20,7 +25,7 @@
   span {
     &::after {
       display: inline-block;
-      content: '';
+      content: '...';
       animation: pusleWebSocketPending 1s linear infinite;
     }
   }

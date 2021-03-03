@@ -5,10 +5,10 @@
   </button>-->
   <div>
     <button *ngIf="(showSidenav$ | async)" class="button-collapse" mat-button (click)="closeSidenav()">
-      <mat-icon>format_indent_decrease</mat-icon>
+      <mat-icon class="icon">format_indent_decrease</mat-icon>
     </button>
     <button *ngIf="!(showSidenav$ | async)" class="button-collapse" mat-button (click)="openSidenav()">
-      <mat-icon>format_indent_increase</mat-icon>
+      <mat-icon class="icon">format_indent_increase</mat-icon>
     </button>
   </div>
   <strong class="title">
@@ -20,8 +20,9 @@
   </div>
   <div style="flex: 1;"></div>
   <app-websocket class="websocket"></app-websocket>
+  <app-notification class="notificaion"></app-notification>
   <button class="user-button" mat-button (click)="showMenuHandler($event)" [matMenuTriggerFor]="menu">
-    <mat-icon>person</mat-icon>
+    <mat-icon class="icon">person</mat-icon>
     <strong class="user-name">
       Thorben Böhle
     </strong>

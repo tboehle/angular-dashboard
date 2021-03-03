@@ -1,0 +1,22 @@
+
+<button *ngIf="true" class="notification-button" mat-button [matMenuTriggerFor]="notification">
+  <mat-icon class="badge" matBadge="1" matBadgeColor="warn" matBadgeSize="small">notifications_active</mat-icon>
+</button>
+<button *ngIf="false" class="notification-button" mat-button disabled>
+  <mat-icon>notifications_inactive</mat-icon>
+</button>
+<mat-menu #notification="matMenu">
+  <button mat-menu-item>
+    <div class="type">
+      <mat-icon class="icon-type">notification</mat-icon>
+    </div>
+    <div class="content">
+      <span class={date}>
+        format with moment
+        02.03.2021
+      </span>
+      <span class={message}>Dies ist eine Nachricht</span>
+    </div>
+  </button>
+</mat-menu>
+
