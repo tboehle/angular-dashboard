@@ -5,15 +5,14 @@ import { Observable } from 'rxjs';
 import { AppConfigService } from '../shared/services/app-config.service';
 
 import { State, selectShowSidenav } from '../state';
-import { LayoutActions } from '../state/layout'
+import { LayoutActions } from '../state/layout';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-
   showSidenav$: Observable<boolean>;
 
   anchorEl: any = null;
@@ -26,8 +25,7 @@ export class HeaderComponent implements OnInit {
     this.showSidenav$ = this.store.select(selectShowSidenav);
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   closeSidenav() {
     /**
@@ -44,17 +42,16 @@ export class HeaderComponent implements OnInit {
   }
 
   public showMenuHandler($event: any): void {
-      this.anchorEl = $event.currentTarget;
+    this.anchorEl = $event.currentTarget;
   }
 
   public closeMenuHandler(): void {
-      this.anchorEl = null;
+    this.anchorEl = null;
   }
 
   public logoutHandler(): void {
-      this.closeMenuHandler()
+    this.closeMenuHandler();
 
-      // Action Logout
+    // Action Logout
   }
-
 }

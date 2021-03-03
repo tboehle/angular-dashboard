@@ -52,7 +52,7 @@ import { ROOT_REDUCERS, metaReducers } from '.';
      *
      * See: https://ngrx.io/guide/effects#registering-root-effects
      */
-    EffectsModule.forRoot([])
-  ]
+    EffectsModule.forRoot([]),
+  ],
 })
-export class AppStateModule { }
+export class AppStateModule {}

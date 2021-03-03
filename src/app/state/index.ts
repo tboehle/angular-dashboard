@@ -31,13 +31,14 @@ export interface State {
  * These reducer functions are called with each dispatched action
  * and the current or initial state and return a new immutable state.
  */
-export const ROOT_REDUCERS = new InjectionToken<
-  ActionReducerMap<State, Action>
->('Root reducers token', {
-  factory: () => ({
-    [fromLayout.layoutFeatureKey]: fromLayout.reducer,
-  }),
-});
+export const ROOT_REDUCERS = new InjectionToken<ActionReducerMap<State, Action>>(
+  'Root reducers token',
+  {
+    factory: () => ({
+      [fromLayout.layoutFeatureKey]: fromLayout.reducer,
+    }),
+  },
+);
 
 // console.log all actions
 export function logger(reducer: ActionReducer<State>): ActionReducer<State> {
@@ -58,18 +59,13 @@ export function logger(reducer: ActionReducer<State>): ActionReducer<State> {
  * the root meta-reducer. To add more meta-reducers, provide an array of meta-reducers
  * that will be composed to form the root meta-reducer.
  */
-export const metaReducers: MetaReducer<State>[] = !environment.production
-  ? [logger]
-  : [];
+export const metaReducers: MetaReducer<State>[] = !environment.production ? [logger] : [];
 
 /**
  * Layout Selectors
  */
 export const selectLayoutState = createFeatureSelector<State, fromLayout.State>(
-  fromLayout.layoutFeatureKey
+  fromLayout.layoutFeatureKey,
 );
 
-export const selectShowSidenav = createSelector(
-  selectLayoutState,
-  fromLayout.selectShowSidenav
-);
+export const selectShowSidenav = createSelector(selectLayoutState, fromLayout.selectShowSidenav);
