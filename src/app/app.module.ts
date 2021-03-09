@@ -20,6 +20,7 @@ import { WebsocketComponent } from './header/websocket/websocket.component';
 import { NotificationComponent } from './header/notification/notification.component';
 
 import { OverlayModule } from '@angular/cdk/overlay';
+import { ContentComponent } from './content/content.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
     HeaderComponent,
     WebsocketComponent,
     NotificationComponent,
+    ContentComponent,
   ],
   imports: [
     CommonModule,
