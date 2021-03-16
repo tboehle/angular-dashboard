@@ -1,0 +1,87 @@
+@import '../../assets/styles/global.scss';
+
+.dashboard {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+.welcome {
+  display: flex;
+  padding-bottom: 30px;
+}
+
+.welcome-icon {
+  width: 90px;
+  height: 90px;
+  font-size: 90px;
+  border: none;
+  color: currentColor;
+  background-color: inherit;
+}
+
+.welcome-message {
+  padding-top: 5px;
+  padding-left: 30px;
+
+  h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+}
+
+.tile-list {
+  display: flex;
+  margin: 0 -10px;
+}
+
+.tile {
+  cursor: pointer;
+  padding: 10px;
+
+  &:hover {
+    .tile-icon {
+      background: $color-primary-light;
+      color: #50585c;
+    }
+  }
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+
+  color: $color-primary-light;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.tile-icon {
+  z-index: 1;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 140px;
+  height: 100px;
+
+  .icon {
+    font-size: 30px;
+  }
+}
+
+.tile-title {
+  z-index: 1;
+  position: relative;
+
+  display: block;
+  color: $color-text-dark;
+  background-color: rgba(245, 245, 245, 0.8);
+
+  padding: 10px 5px;
+
+  text-align: center;
+}

@@ -1,0 +1,27 @@
+<div class="dashboard">
+  <div class="welcome">
+    <mat-icon class="welcome-icon">person</mat-icon>
+    <div class="welcome-message">
+      <h1>Welcome to Dashboard</h1>
+      <strong>Thorben Böhle</strong>
+    </div>
+  </div>
+  <div class="tile-list">
+    <div class="tile">
+      <a mat-button [routerLink]="['/', 'maintenance']" class="button">
+        <div class="tile-icon">
+          <mat-icon class="icon">build</mat-icon>
+        </div>
+        <strong class="tile-title">Maintenance</strong>
+      </a>
+    </div>
+    <div class="tile">
+      <a mat-button [routerLink]="['/', 'training']" class="button">
+        <div class="tile-icon">
+          <mat-icon class="icon">touch_app</mat-icon>
+        </div>
+        <strong class="tile-title">Training</strong>
+      </a>
+    </div>
+  </div>
+</div>

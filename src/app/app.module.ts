@@ -21,6 +21,7 @@ import { NotificationComponent } from './header/notification/notification.compon
 
 import { OverlayModule } from '@angular/cdk/overlay';
 import { ContentComponent } from './content/content.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ContentComponent } from './content/content.component';
     WebsocketComponent,
     NotificationComponent,
     ContentComponent,
+    DashboardComponent,
   ],
   imports: [
     CommonModule,
