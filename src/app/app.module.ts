@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -19,9 +19,13 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { WebsocketComponent } from './header/websocket/websocket.component';
 import { NotificationComponent } from './header/notification/notification.component';
 
+import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
+
 import { OverlayModule } from '@angular/cdk/overlay';
 import { ContentComponent } from './content/content.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+
+import { initializeKeycloak } from './shared/utils/auth-utils';
 
 @NgModule({
   declarations: [
@@ -45,8 +49,17 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatMenuModule,
     OverlayModule,
     MatBadgeModule,
+    KeycloakAngularModule,
   ],
-  providers: [AppConfigService],
+  providers: [
+    AppConfigService,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initializeKeycloak,
+      multi: true,
+      deps: [KeycloakService],
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
